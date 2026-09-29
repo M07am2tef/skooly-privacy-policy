@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="سياسة الخصوصية لتطبيق سكولي — Skooly Privacy Policy">
+  <meta name="theme-color" content="#05233C">
+  <title>سياسة الخصوصية — Skooly</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ====================================================
+       SKOOLY — Privacy Policy
+       Colors: Navy #05233C  |  Gold #FEBC04
+       ==================================================== */
+
+    :root {
+      --navy:     #05233C;
+      --navy-d:   #041A2E;
+      --gold:     #FEBC04;
+      --gold-d:   #D9A000;
+      --gold-bg:  #FFF9EB;
+      --ink:      #1A2E42;
+      --muted:    #5B6B7E;
+      --line:     #E4EAF2;
+      --bg:       #FFFFFF;
+      --bg-soft:  #F5F8FB;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      font-size: 16px;
+      line-height: 1.8;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* English mode */
+    body.en { direction: ltr; font-family: 'Inter', sans-serif; }
+    .ar { display: block; }
+    .en-txt { display: none; }
+    body.en .ar { display: none; }
+    body.en .en-txt { display: block; }
+
+    ::selection { background: var(--gold); color: var(--navy); }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 99px; }
+
+    /* ── Navbar ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--navy);
+      padding: 0 28px;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 20px rgba(0,0,0,.25);
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; }
+    .nav-brand img { height: 38px; }
+    .nav-brand-name {
+      font-size: 1.25rem; font-weight: 800;
+      color: #fff; letter-spacing: .08em;
+    }
+    .nav-brand-name span { color: var(--gold); }
+
+    .lang-toggle { display: flex; gap: 6px; }
+    .lang-btn {
+      padding: 5px 16px; border-radius: 99px;
+      border: 1.5px solid rgba(255,255,255,.25);
+      background: transparent; color: rgba(255,255,255,.7);
+      font-size: .82rem; font-weight: 600; cursor: pointer;
+      font-family: inherit; transition: all .2s;
+    }
+    .lang-btn.on { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(160deg, var(--navy-d) 0%, var(--navy) 100%);
+      padding: 120px 24px 72px;
+      text-align: center;
+      clip-path: ellipse(100% 100% at 50% 0%);
+    }
+    .hero-logo {
+      width: 72px; height: 72px;
+      background: var(--gold);
+      border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 32px rgba(254,188,4,.4);
+    }
+    .hero-logo svg { width: 38px; height: 38px; color: var(--navy); }
+    .hero h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .hero p { color: rgba(255,255,255,.6); font-size: 1rem; margin-bottom: 22px; }
+    .hero-date {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(254,188,4,.15); border: 1px solid rgba(254,188,4,.3);
+      color: var(--gold); font-size: .8rem; font-weight: 700;
+      padding: 5px 14px; border-radius: 99px; letter-spacing: .05em;
+    }
+
+    /* ── Lang bar ── */
+    .lang-bar {
+      position: sticky; top: 64px; z-index: 90;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--line);
+      display: flex; justify-content: center; gap: 8px;
+      padding: 12px;
+    }
+    .lang-bar .lang-btn { border-color: var(--line); color: var(--muted); background: var(--bg); }
+    .lang-bar .lang-btn.on { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+    /* ── Page ── */
+    .page { max-width: 800px; margin: 0 auto; padding: 0 20px 80px; }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--gold-bg);
+      border: 1.5px solid rgba(254,188,4,.4);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin: 44px 0 48px;
+    }
+    .toc-title {
+      font-size: .9rem; font-weight: 800; color: var(--navy);
+      margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+    }
+    .toc-title svg { width: 17px; height: 17px; color: var(--gold-d); }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 5px 20px;
+    }
+    .toc-grid a {
+      font-size: .86rem; color: var(--navy); font-weight: 500;
+      text-decoration: none; display: flex; align-items: center; gap: 8px;
+      padding: 3px 0; transition: color .15s;
+    }
+    .toc-grid a:hover { color: var(--gold-d); }
+    .toc-grid a::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+    }
+
+    /* ── Section ── */
+    .sec { margin-bottom: 52px; scroll-margin-top: 120px; }
+
+    .sec-head {
+      display: flex; align-items: center; gap: 14px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--line);
+      margin-bottom: 20px;
+    }
+    .sec-num {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      background: var(--navy); color: var(--gold);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; font-weight: 800;
+    }
+    .sec-head h2 { font-size: 1.2rem; font-weight: 800; color: var(--navy); }
+
+    .sec p { color: var(--ink); margin-bottom: 14px; font-size: .97rem; }
+    .sec p:last-child { margin-bottom: 0; }
+
+    /* ── List ── */
+    .plist { list-style: none; margin: 12px 0; }
+    .plist li {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 10px 0; border-bottom: 1px solid var(--line);
+      font-size: .94rem; color: var(--ink);
+    }
+    .plist li:last-child { border-bottom: none; }
+    .plist li::before {
+      content: ''; flex-shrink: 0; width: 7px; height: 7px;
+      background: var(--gold); border-radius: 50%; margin-top: 9px;
+    }
+    .plist li strong { color: var(--navy); }
+
+    /* ── Alert boxes ── */
+    .alert {
+      display: flex; gap: 13px; align-items: flex-start;
+      border-radius: 12px; padding: 15px 18px;
+      margin: 16px 0; font-size: .92rem;
+    }
+    .alert svg { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; }
+    .alert p { margin: 0; }
+    .alert strong { display: block; margin-bottom: 2px; }
+    .a-gold  { background: rgba(254,188,4,.08); border: 1.5px solid rgba(254,188,4,.3); }
+    .a-gold  svg { color: var(--gold-d); }
+    .a-green { background: rgba(31,178,90,.07); border: 1.5px solid rgba(31,178,90,.28); }
+    .a-green svg { color: #1FB25A; }
+    .a-green strong { color: #0d6e34; }
+    .a-navy  { background: rgba(5,35,60,.05); border: 1.5px solid rgba(5,35,60,.15); }
+    .a-navy  svg { color: var(--navy); }
+    .a-navy  strong { color: var(--navy); }
+
+    /* ── Data cards ── */
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 12px; margin-top: 18px; }
+    .card {
+      background: var(--bg-soft); border: 1.5px solid var(--line);
+      border-radius: 14px; padding: 16px; transition: border-color .2s;
+    }
+    .card:hover { border-color: var(--gold); }
+    .card-icon {
+      width: 36px; height: 36px; background: var(--gold-bg);
+      border-radius: 9px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 10px;
+    }
+    .card-icon svg { width: 18px; height: 18px; color: var(--gold-d); }
+    .card h4 { font-size: .88rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .card p { font-size: .8rem; color: var(--muted); margin: 0; line-height: 1.5; }
+    .tag {
+      display: inline-block; margin-top: 8px;
+      background: rgba(254,188,4,.13); color: var(--gold-d);
+      font-size: .72rem; font-weight: 700;
+      padding: 2px 9px; border-radius: 99px;
+    }
+
+    /* ── Permissions table ── */
+    .ptable { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: .86rem; border-radius: 12px; overflow: hidden; }
+    .ptable thead tr { background: var(--navy); color: #fff; }
+    .ptable th { padding: 11px 14px; text-align: right; font-weight: 700; }
+    .ptable td { padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .ptable tbody tr:last-child td { border-bottom: none; }
+    .ptable tbody tr:nth-child(even) { background: var(--bg-soft); }
+    .ptable code { background: rgba(5,35,60,.07); padding: 1px 6px; border-radius: 5px; font-size: .8rem; }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 99px; font-size: .73rem; font-weight: 700; }
+    .b-req  { background: rgba(229,72,77,.1); color: #9b1c20; }
+    .b-sec  { background: rgba(254,188,4,.15); color: var(--gold-d); }
+
+    /* ── Rights grid ── */
+    .rights { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px,1fr)); gap: 10px; margin-top: 16px; }
+    .right {
+      background: var(--gold-bg); border: 1.5px solid rgba(254,188,4,.25);
+      border-radius: 14px; padding: 16px; text-align: center;
+      transition: all .2s;
+    }
+    .right:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .right svg { width: 26px; height: 26px; color: var(--gold-d); margin: 0 auto 8px; }
+    .right h4 { font-size: .85rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .right p { font-size: .76rem; color: var(--muted); margin: 0; line-height: 1.5; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--navy-d), var(--navy));
+      border-radius: 18px; padding: 32px 28px; text-align: center;
+      margin-top: 16px;
+    }
+    .contact-card h3 { font-size: 1.1rem; color: #fff; font-weight: 700; margin-bottom: 6px; }
+    .contact-card p { color: rgba(255,255,255,.55); font-size: .9rem; margin-bottom: 18px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+      color: #fff; padding: 9px 18px; border-radius: 99px;
+      font-size: .86rem; font-weight: 600; font-family: 'Inter', sans-serif;
+    }
+    .chip svg { width: 15px; height: 15px; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--navy-d); text-align: center; padding: 28px 20px;
+    }
+    .foot-brand { display: flex; align-items: center; justify-content: center; gap: 9px; margin-bottom: 8px; }
+    .foot-brand img { height: 30px; }
+    .foot-brand span { font-size: 1.1rem; font-weight: 800; color: #fff; letter-spacing: .07em; }
+    .foot-brand span em { color: var(--gold); font-style: normal; }
+    footer p { font-size: .78rem; color: rgba(255,255,255,.35); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { padding: 100px 20px 60px; }
+      .toc { padding: 20px; }
+      .cards { grid-template-columns: 1fr 1fr; }
+      .rights { grid-template-columns: 1fr 1fr; }
+      .ptable { font-size: .78rem; }
+      .ptable th, .ptable td { padding: 8px 10px; }
+    }
+    @media (max-width: 380px) {
+      .cards { grid-template-columns: 1fr; }
+      .rights { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ Navbar ═══ -->
+<nav class="nav">
+  <div class="nav-brand">
+    <img src="images/icon.png" alt="Skooly">
+    <span class="nav-brand-name">SK<span>OO</span>LY</span>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn on" onclick="setLang('ar')">عربي</button>
+    <button class="lang-btn"    onclick="setLang('en')">EN</button>
+  </div>
+</nav>
+
+<!-- ═══ Lang bar ═══ -->
+<div class="lang-bar">
+  <button class="lang-btn on" onclick="setLang('ar')">🇸🇦 عربي</button>
+  <button class="lang-btn"    onclick="setLang('en')">🇺🇸 English</button>
+</div>
+
+<!-- ═══ Hero ═══ -->
+<section class="hero">
+  <div class="hero-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+    </svg>
+  </div>
+  <h1 class="ar">سياسة الخصوصية</h1>
+  <h1 class="en-txt">Privacy Policy</h1>
+  <p class="ar">نلتزم بحماية خصوصيتك وبياناتك في كل خطوة</p>
+  <p class="en-txt">We are committed to protecting your privacy at every step</p>
+  <div class="hero-date">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:13px;height:13px">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+    </svg>
+    <span class="ar">آخر تحديث: سبتمبر ٢٠٢٦</span>
+    <span class="en-txt">Last updated: September 2026</span>
+  </div>
+</section>
+
+<!-- ═══ Main ═══ -->
+<div class="page">
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-title">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h10M4 18h6"/></svg>
+      <span class="ar">فهرس المحتويات</span>
+      <span class="en-txt">Table of Contents</span>
+    </div>
+    <div class="toc-grid">
+      <a href="#s1"><span class="ar">١. مقدمة</span><span class="en-txt">1. Introduction</span></a>
+      <a href="#s2"><span class="ar">٢. البيانات التي نجمعها</span><span class="en-txt">2. Data We Collect</span></a>
+      <a href="#s3"><span class="ar">٣. كيف نستخدم بياناتك</span><span class="en-txt">3. How We Use Your Data</span></a>
+      <a href="#s4"><span class="ar">٤. أذونات الموقع الجغرافي</span><span class="en-txt">4. Location Permissions</span></a>
+      <a href="#s5"><span class="ar">٥. خدمات المقدّمة</span><span class="en-txt">5. Foreground Services</span></a>
+      <a href="#s6"><span class="ar">٦. المعرِّفات الإعلانية</span><span class="en-txt">6. Advertising IDs</span></a>
+      <a href="#s7"><span class="ar">٧. الميزات الصحية</span><span class="en-txt">7. Health Features</span></a>
+      <a href="#s8"><span class="ar">٨. أمان البيانات</span><span class="en-txt">8. Data Security</span></a>
+      <a href="#s9"><span class="ar">٩. مشاركة البيانات</span><span class="en-txt">9. Data Sharing</span></a>
+      <a href="#s10"><span class="ar">١٠. حقوقك</span><span class="en-txt">10. Your Rights</span></a>
+      <a href="#s11"><span class="ar">١١. الحسابات وتسجيل الدخول</span><span class="en-txt">11. Accounts & Sign-In</span></a>
+      <a href="#s12"><span class="ar">١٢. الاحتفاظ بالبيانات</span><span class="en-txt">12. Data Retention</span></a>
+      <a href="#s13"><span class="ar">١٣. تحديثات السياسة</span><span class="en-txt">13. Policy Updates</span></a>
+      <a href="#s14"><span class="ar">١٤. تواصل معنا</span><span class="en-txt">14. Contact Us</span></a>
+    </div>
+  </div>
+
+
+  <!-- ═══ § 1 ═══ -->
+  <section class="sec" id="s1">
+    <div class="sec-head">
+      <div class="sec-num">١<span class="en-txt" style="display:none">1</span></div>
+      <h2 class="ar">مقدمة</h2>
+      <h2 class="en-txt">Introduction</h2>
+    </div>
+    <p class="ar">مرحبًا بك في تطبيق <strong>سكولي (Skooly)</strong>، منصة التتبع الذكي لحافلات المدارس وإدارة النقل المدرسي. نلتزم بأعلى معايير الشفافية والحماية لبياناتك وبيانات أطفالك.</p>
+    <p class="ar">تصف هذه السياسة بدقة كيف يجمع التطبيق بياناتك، ويستخدمها، ويشاركها، ويحميها. باستخدامك للتطبيق، توافق على هذه الشروط.</p>
+    <p class="ar">التطبيق مخصص لـ: <strong>أولياء الأمور</strong> لمتابعة أبنائهم، و<strong>المدارس والإداريين</strong> لإدارة النقل، و<strong>السائقين</strong> لتسهيل رحلاتهم.</p>
+    <p class="en-txt">Welcome to <strong>Skooly</strong>, the smart school bus tracking and transportation management platform. We are committed to the highest standards of transparency and protection for your data and your children's data.</p>
+    <p class="en-txt">This policy accurately describes how Skooly collects, uses, shares, and protects your data. By using the app, you agree to these terms.</p>
+    <p class="en-txt">The app is designed for: <strong>Parents</strong> to track their children, <strong>Schools &amp; Admins</strong> to manage transportation, and <strong>Drivers</strong> to simplify their routes.</p>
+  </section>
+
+
+  <!-- ═══ § 2 ═══ -->
+  <section class="sec" id="s2">
+    <div class="sec-head">
+      <div class="sec-num">٢<span class="en-txt" style="display:none">2</span></div>
+      <h2 class="ar">البيانات التي نجمعها</h2>
+      <h2 class="en-txt">Data We Collect</h2>
+    </div>
+    <p class="ar">يجمع سكولي الأنواع التالية فقط من البيانات اللازمة لتقديم الخدمة:</p>
+    <p class="en-txt">Skooly collects only the following types of data necessary to provide the service:</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+        <h4 class="ar">أرقام تعريف المستخدمين</h4><h4 class="en-txt">User IDs</h4>
+        <p class="ar">معرّف فريد لإدارة الصلاحيات والأمان</p><p class="en-txt">Unique identifier for permissions and security</p>
+        <span class="tag ar">وظائف التطبيق</span><span class="tag en-txt">App Functionality</span>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+        <h4 class="ar">البريد الإلكتروني</h4><h4 class="en-txt">Email Address</h4>
+        <p class="ar">لإدارة الحساب وإشعارات الخدمة</p><p class="en-txt">For account management & service notifications</p>
+        <span class="tag ar">إدارة الحساب</span><span class="tag en-txt">Account Management</span>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+        <h4 class="ar">رقم الهاتف</h4><h4 class="en-txt">Phone Number</h4>
+        <p class="ar">للتواصل بين الأطراف</p><p class="en-txt">Communication between parties</p>
+        <span class="tag ar">وظائف التطبيق</span><span class="tag en-txt">App Functionality</span>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+        <h4 class="ar">العنوان المنزلي</h4><h4 class="en-txt">Home Address</h4>
+        <p class="ar">لتحديد نقاط الركوب والنزول</p><p class="en-txt">To define pick-up/drop-off points</p>
+        <span class="tag ar">وظائف التطبيق</span><span class="tag en-txt">App Functionality</span>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <h4 class="ar">الموقع الجغرافي الدقيق</h4><h4 class="en-txt">Precise Location</h4>
+        <p class="ar">تتبع الحافلة في الوقت الفعلي</p><p class="en-txt">Real-time bus tracking</p>
+        <span class="tag ar">الوظيفة الأساسية</span><span class="tag en-txt">Core Function</span>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+        <h4 class="ar">معرِّف الجهاز</h4><h4 class="en-txt">Device Identifier</h4>
+        <p class="ar">لإدارة الإشعارات والجلسات</p><p class="en-txt">Push notifications & sessions</p>
+        <span class="tag ar">الأمان</span><span class="tag en-txt">Security</span>
+      </div>
+    </div>
+
+    <div class="alert a-green" style="margin-top:18px">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <p><strong class="ar">لا نجمع إطلاقًا:</strong><strong class="en-txt">We never collect:</strong> <span class="ar">بيانات مالية، تصفح الويب، صور، فيديوهات، بيانات صحية، أو جهات الاتصال.</span><span class="en-txt"> financial data, browsing history, photos, videos, health data, or contacts.</span></p>
+    </div>
+  </section>
+
+
+  <!-- ═══ § 3 ═══ -->
+  <section class="sec" id="s3">
+    <div class="sec-head">
+      <div class="sec-num">٣<span class="en-txt" style="display:none">3</span></div>
+      <h2 class="ar">كيف نستخدم بياناتك</h2>
+      <h2 class="en-txt">How We Use Your Data</h2>
+    </div>
+    <p class="ar">نستخدم البيانات <strong>حصريًا</strong> لتقديم خدمات سكولي وتحسينها:</p>
+    <p class="en-txt">We use data <strong>exclusively</strong> to deliver and improve Skooly services:</p>
+    <ul class="plist">
+      <li><span class="ar"><strong>تتبع الحافلة:</strong> إرسال الموقع الفعلي للحافلة لأولياء الأمور في الوقت الفعلي.</span><span class="en-txt"><strong>Bus Tracking:</strong> Sending the real bus location to parents in real time.</span></li>
+      <li><span class="ar"><strong>إشعارات الوصول:</strong> تنبيه ولي الأمر فور صعود أو نزول الطالب.</span><span class="en-txt"><strong>Arrival Alerts:</strong> Notifying parents when a student boards or exits the bus.</span></li>
+      <li><span class="ar"><strong>إدارة الحسابات:</strong> إنشاء الحسابات والتحقق وإدارة صلاحيات كل دور.</span><span class="en-txt"><strong>Account Management:</strong> Account creation, verification, and role-based permissions.</span></li>
+      <li><span class="ar"><strong>تحسين المسارات:</strong> تحليل بيانات الموقع لتقليل وقت الانتظار.</span><span class="en-txt"><strong>Route Optimization:</strong> Analyzing location data to reduce waiting times.</span></li>
+      <li><span class="ar"><strong>الأمان:</strong> رصد النشاط غير المعتاد وحماية الحسابات.</span><span class="en-txt"><strong>Security:</strong> Detecting unusual activity and protecting accounts.</span></li>
+      <li><span class="ar"><strong>دعم المستخدمين:</strong> مساعدتك في حل المشكلات التقنية.</span><span class="en-txt"><strong>Support:</strong> Helping you resolve technical issues.</span></li>
+    </ul>
+    <div class="alert a-green">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+      <p><span class="ar"><strong>لا نستخدم بياناتك أبدًا</strong> في الإعلانات أو نشاركها لأغراض تجارية.</span><span class="en-txt"><strong>We never use your data</strong> for advertising or share it for commercial purposes.</span></p>
+    </div>
+  </section>
+
+
+  <!-- ═══ § 4 ═══ -->
+  <section class="sec" id="s4">
+    <div class="sec-head">
+      <div class="sec-num">٤<span class="en-txt" style="display:none">4</span></div>
+      <h2 class="ar">أذونات الموقع الجغرافي</h2>
+      <h2 class="en-txt">Location Permissions</h2>
+    </div>
+    <p class="ar">يستخدم سكولي أذونات الموقع لأنها <strong>الجوهر الأساسي للخدمة</strong> — بدونها لا يمكن تتبع الحافلات.</p>
+    <p class="en-txt">Skooly uses location permissions because they are the <strong>core of the service</strong> — without them, bus tracking cannot be provided.</p>
+
+    <table class="ptable">
+      <thead>
+        <tr>
+          <th class="ar">الإذن</th><th class="ar">من يستخدمه</th><th class="ar">الغرض</th><th class="ar">النوع</th>
+          <th class="en-txt">Permission</th><th class="en-txt">Who Uses It</th><th class="en-txt">Purpose</th><th class="en-txt">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>ACCESS_FINE_LOCATION</code></td>
+          <td class="ar">جهاز السائق فقط</td><td class="en-txt">Driver's device only</td>
+          <td class="ar">إرسال موقع GPS دقيق أثناء الرحلات</td><td class="en-txt">Send precise GPS during trips</td>
+          <td><span class="badge b-req ar">أساسي</span><span class="badge b-req en-txt">Core</span></td>
+        </tr>
+        <tr>
+          <td><code>ACCESS_COARSE_LOCATION</code></td>
+          <td class="ar">جهاز السائق</td><td class="en-txt">Driver's device</td>
+          <td class="ar">احتياطي عند ضعف إشارة GPS</td><td class="en-txt">Fallback when GPS is weak</td>
+          <td><span class="badge b-sec ar">ثانوي</span><span class="badge b-sec en-txt">Secondary</span></td>
+        </tr>
+        <tr>
+          <td><code>ACCESS_BACKGROUND_LOCATION</code></td>
+          <td class="ar">السائق أثناء الرحلة النشطة فقط</td><td class="en-txt">Driver during active trip only</td>
+          <td class="ar">استمرار إرسال الموقع لو السائق انتقل لتطبيق آخر</td><td class="en-txt">Continue location even if driver switches apps</td>
+          <td><span class="badge b-req ar">أساسي</span><span class="badge b-req en-txt">Core</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert a-gold" style="margin-top:14px">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <p><span class="ar">لا يُجمَع الموقع من جهاز ولي الأمر، ولا خارج ساعات الرحلات المجدولة.</span><span class="en-txt">Location is never collected from the parent's device or outside scheduled trip hours.</span></p>
+    </div>
+  </section>
+
+
+  <!-- ═══ § 5 ═══ -->
+  <section class="sec" id="s5">
+    <div class="sec-head">
+      <div class="sec-num">٥<span class="en-txt" style="display:none">5</span></div>
+      <h2 class="ar">أذونات خدمات المقدّمة (Foreground Services)</h2>
+      <h2 class="en-txt">Foreground Service Permissions</h2>
+    </div>
+    <p class="ar">وفقًا لمتطلبات Android 14، يُعلن سكولي عن استخدام خدمات المقدّمة لضمان استمرار تتبع الحافلة بشكل موثوق.</p>
+    <p class="en-txt">In accordance with Android 14 requirements, Skooly declares its use of Foreground Services to ensure reliable and continuous bus tracking.</p>
+
+    <table class="ptable">
+      <thead>
+        <tr>
+          <th class="ar">الإذن</th><th class="ar">الغرض</th><th class="ar">الحالة</th>
+          <th class="en-txt">Permission</th><th class="en-txt">Purpose</th><th class="en-txt">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>FOREGROUND_SERVICE</code></td>
+          <td class="ar">تشغيل خدمة تتبع GPS في المقدّمة أثناء الرحلات</td><td class="en-txt">Run GPS tracking service in foreground during trips</td>
+          <td><span class="badge b-req ar">مُعلَن</span><span class="badge b-req en-txt">Declared</span></td>
+        </tr>
+        <tr>
+          <td><code>FOREGROUND_SERVICE_LOCATION</code></td>
+          <td class="ar">تحديد النوع = موقع جغرافي (مطلوب Android 14+)</td><td class="en-txt">Declare type = location (required Android 14+)</td>
+          <td><span class="badge b-req ar">مُعلَن</span><span class="badge b-req en-txt">Declared</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul class="plist" style="margin-top:14px">
+      <li><span class="ar">الخدمة تعمل <strong>فقط أثناء رحلة نشطة</strong> يبدأها السائق يدويًا.</span><span class="en-txt">The service runs <strong>only during an active trip</strong> manually started by the driver.</span></li>
+      <li><span class="ar">يظهر <strong>إشعار دائم</strong> في شريط الحالة طوال فترة التشغيل.</span><span class="en-txt">A <strong>persistent notification</strong> appears in the status bar throughout runtime.</span></li>
+      <li><span class="ar">تتوقف الخدمة فورًا عند إنهاء الرحلة أو إغلاق التطبيق.</span><span class="en-txt">The service stops immediately when the trip ends or the driver closes the app.</span></li>
+      <li><span class="ar">لا تُشغِّل ميكروفون أو كاميرا أو أي خدمة غير الموقع الجغرافي.</span><span class="en-txt">Does not activate microphone, camera, or any service other than location.</span></li>
+    </ul>
+  </section>
+
+
+  <!-- ═══ § 6 ═══ -->
+  <section class="sec" id="s6">
+    <div class="sec-head">
+      <div class="sec-num">٦<span class="en-txt" style="display:none">6</span></div>
+      <h2 class="ar">المعرِّف الإعلاني (Advertising ID)</h2>
+      <h2 class="en-txt">Advertising Identifier (GAID)</h2>
+    </div>
+    <div class="alert a-green">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <p>
+        <strong class="ar">سكولي لا يستخدم المعرِّف الإعلاني (GAID) إطلاقًا.</strong>
+        <strong class="en-txt">Skooly does NOT use the Advertising ID (GAID) in any way.</strong>
+        <span class="ar"> لا يوجد في التطبيق إعلانات، ولا شبكات إعلانية، ولا تتبع إعلاني.</span>
+        <span class="en-txt"> The app contains no ads, no ad networks, and no advertising tracking.</span>
+      </p>
+    </div>
+    <ul class="plist">
+      <li><span class="ar"><strong>لا إعلانات:</strong> سكولي خدمة مدفوعة للمدارس وليست مدعومة بإعلانات.</span><span class="en-txt"><strong>No ads:</strong> Skooly is a paid service for schools, not ad-supported.</span></li>
+      <li><span class="ar"><strong>لا GAID:</strong> لم ندمج أي SDK إعلاني (AdMob أو ما شابه).</span><span class="en-txt"><strong>No GAID:</strong> We have not integrated any advertising SDK (AdMob or similar).</span></li>
+      <li><span class="ar"><strong>لا تتبع إعلاني:</strong> لا نتتبع المستخدمين عبر تطبيقات أخرى.</span><span class="en-txt"><strong>No ad tracking:</strong> We do not track users across other apps.</span></li>
+    </ul>
+  </section>
+
+
+  <!-- ═══ § 7 ═══ -->
+  <section class="sec" id="s7">
+    <div class="sec-head">
+      <div class="sec-num">٧<span class="en-txt" style="display:none">7</span></div>
+      <h2 class="ar">التطبيقات المتعلقة بالصحة</h2>
+      <h2 class="en-txt">Health-Related App Declaration</h2>
+    </div>
+    <div class="alert a-navy">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <p>
+        <strong class="ar">سكولي ليس تطبيقًا صحيًا ولا يتعلق بالرعاية الصحية.</strong>
+        <strong class="en-txt">Skooly is NOT a health-related app.</strong>
+        <span class="ar"> لا يجمع أي بيانات صحية، ولا بيانات لياقة، ولا يتصل بأي خدمات طبية.</span>
+        <span class="en-txt"> It collects no health data, fitness data, and connects to no medical services.</span>
+      </p>
+    </div>
+    <ul class="plist">
+      <li><span class="ar"><strong>لا بيانات صحية:</strong> لا يجمع أي معلومات عن الصحة الجسدية أو النفسية.</span><span class="en-txt"><strong>No health data:</strong> Collects no physical or mental health information.</span></li>
+      <li><span class="ar"><strong>لا تكامل مع منصات صحية:</strong> لا يتصل بـ Google Fit أو Apple Health أو ما شابه.</span><span class="en-txt"><strong>No health platforms:</strong> Does not connect to Google Fit, Apple Health, or similar.</span></li>
+      <li><span class="ar"><strong>الغرض الوحيد:</strong> النقل والتتبع المدرسي — نشاط لوجستي بحت.</span><span class="en-txt"><strong>Sole purpose:</strong> School transportation & tracking — a purely logistical activity.</span></li>
+    </ul>
+  </section>
+
+
+  <!-- ═══ § 8 ═══ -->
+  <section class="sec" id="s8">
+    <div class="sec-head">
+      <div class="sec-num">٨<span class="en-txt" style="display:none">8</span></div>
+      <h2 class="ar">أمان البيانات والتشفير</h2>
+      <h2 class="en-txt">Data Security &amp; Encryption</h2>
+    </div>
+    <ul class="plist">
+      <li><span class="ar"><strong>التشفير أثناء النقل:</strong> جميع البيانات مُشفَّرة بـ TLS 1.3.</span><span class="en-txt"><strong>Encryption in Transit:</strong> All data encrypted with TLS 1.3.</span></li>
+      <li><span class="ar"><strong>التشفير في حالة السكون:</strong> البيانات الحساسة مخزّنة بـ AES-256.</span><span class="en-txt"><strong>Encryption at Rest:</strong> Sensitive data stored with AES-256.</span></li>
+      <li><span class="ar"><strong>التحكم في الوصول:</strong> كل مستخدم يصل فقط لبيانات دوره ومدرسته.</span><span class="en-txt"><strong>Access Control:</strong> Each user accesses only their role and school data.</span></li>
+      <li><span class="ar"><strong>المصادقة:</strong> رموز JWT بصلاحية محدودة وتجديد آمن.</span><span class="en-txt"><strong>Authentication:</strong> JWT tokens with limited validity and secure renewal.</span></li>
+      <li><span class="ar"><strong>حسابات المؤسسات:</strong> الدخول عبر حسابات المدرسة التي تُديرها الجهة التعليمية.</span><span class="en-txt"><strong>Enterprise Accounts:</strong> Access via school accounts managed by the institution.</span></li>
+    </ul>
+  </section>
+
+
+  <!-- ═══ § 9 ═══ -->
+  <section class="sec" id="s9">
+    <div class="sec-head">
+      <div class="sec-num">٩<span class="en-txt" style="display:none">9</span></div>
+      <h2 class="ar">مشاركة البيانات</h2>
+      <h2 class="en-txt">Data Sharing</h2>
+    </div>
+    <div class="alert a-green">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+      <p><span class="ar"><strong>لا نبيع بياناتك ولا نشاركها لأغراض تجارية.</strong></span><span class="en-txt"><strong>We do not sell or share your data for commercial purposes.</strong></span></p>
+    </div>
+    <ul class="plist">
+      <li><span class="ar"><strong>داخل المنظومة المدرسية:</strong> بيانات محدودة بين المدرسة وولي الأمر والسائق — بموافقتك.</span><span class="en-txt"><strong>Within the school ecosystem:</strong> Limited data between school, parent, and driver — with your consent.</span></li>
+      <li><span class="ar"><strong>مزودو البنية التحتية:</strong> موفرون موثوقون كـ Firebase لتشغيل التطبيق، مُلزَمون بسرية البيانات.</span><span class="en-txt"><strong>Infrastructure providers:</strong> Trusted providers like Firebase, legally bound to confidentiality.</span></li>
+      <li><span class="ar"><strong>المتطلبات القانونية:</strong> استجابةً لأمر قضائي رسمي وفق القانون.</span><span class="en-txt"><strong>Legal requirements:</strong> In response to a court order under applicable law.</span></li>
+    </ul>
+  </section>
+
+
+  <!-- ═══ § 10 ═══ -->
+  <section class="sec" id="s10">
+    <div class="sec-head">
+      <div class="sec-num">١٠<span class="en-txt" style="display:none">10</span></div>
+      <h2 class="ar">حقوقك كمستخدم</h2>
+      <h2 class="en-txt">Your Rights as a User</h2>
+    </div>
+    <div class="rights">
+      <div class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+        <h4 class="ar">الاطلاع</h4><h4 class="en-txt">Access</h4>
+        <p class="ar">طلب نسخة من جميع بياناتك</p><p class="en-txt">Request a copy of all your data</p>
+      </div>
+      <div class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+        <h4 class="ar">التصحيح</h4><h4 class="en-txt">Correction</h4>
+        <p class="ar">تصحيح بيانات غير دقيقة</p><p class="en-txt">Correct inaccurate data</p>
+      </div>
+      <div class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+        <h4 class="ar">الحذف</h4><h4 class="en-txt">Deletion</h4>
+        <p class="ar">طلب حذف بياناتك</p><p class="en-txt">Request data deletion</p>
+      </div>
+      <div class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+        <h4 class="ar">الاعتراض</h4><h4 class="en-txt">Objection</h4>
+        <p class="ar">الاعتراض على معالجة بياناتك</p><p class="en-txt">Object to data processing</p>
+      </div>
+      <div class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+        <h4 class="ar">قابلية النقل</h4><h4 class="en-txt">Portability</h4>
+        <p class="ar">بياناتك بصيغة مقروءة آليًا</p><p class="en-txt">Data in machine-readable format</p>
+      </div>
+      <div class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        <h4 class="ar">سحب الموافقة</h4><h4 class="en-txt">Withdraw Consent</h4>
+        <p class="ar">في أي وقت بدون تأثير رجعي</p><p class="en-txt">At any time without retroactive effect</p>
+      </div>
+    </div>
+    <div class="alert a-gold" style="margin-top:16px">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      <p><span class="ar">لممارسة أي من هذه الحقوق، راسلنا على <strong>privacy@skooly.app</strong> وسنرد خلال <strong>30 يومًا</strong>.</span><span class="en-txt">To exercise any right, email us at <strong>privacy@skooly.app</strong> — we respond within <strong>30 days</strong>.</span></p>
+    </div>
+  </section>
+
+
+  <!-- ═══ § 11 ═══ -->
+  <section class="sec" id="s11">
+    <div class="sec-head">
+      <div class="sec-num">١١<span class="en-txt" style="display:none">11</span></div>
+      <h2 class="ar">الحسابات وتسجيل الدخول</h2>
+      <h2 class="en-txt">Accounts &amp; Sign-In</h2>
+    </div>
+    <ul class="plist">
+      <li><span class="ar">المستخدمون يُسجِّلون الدخول عبر <strong>حسابات المؤسسة</strong> التي تُنشئها الجهة التعليمية — لا تسجيل شخصي مستقل.</span><span class="en-txt">Users sign in using <strong>enterprise accounts</strong> created by the educational institution — no independent personal registration.</span></li>
+      <li><span class="ar">المدرسة تُدير الصلاحيات وتُحدد الأدوار (ولي أمر، سائق، مشرف).</span><span class="en-txt">The school manages permissions and defines roles (parent, driver, admin).</span></li>
+      <li><span class="ar">لا يدعم التطبيق تسجيل الدخول عبر Google أو Facebook أو أي OAuth خارجي.</span><span class="en-txt">The app does not support sign-in via Google, Facebook, or any external OAuth.</span></li>
+    </ul>
+  </section>
+
+
+  <!-- ═══ § 12 ═══ -->
+  <section class="sec" id="s12">
+    <div class="sec-head">
+      <div class="sec-num">١٢<span class="en-txt" style="display:none">12</span></div>
+      <h2 class="ar">الاحتفاظ بالبيانات وحذفها</h2>
+      <h2 class="en-txt">Data Retention &amp; Deletion</h2>
+    </div>
+    <ul class="plist">
+      <li><span class="ar">بيانات الحساب: تُحذَف خلال <strong>30 يومًا</strong> من تاريخ الطلب.</span><span class="en-txt">Account data: deleted within <strong>30 days</strong> of the request.</span></li>
+      <li><span class="ar">سجلات الموقع: تُحذَف خلال <strong>90 يومًا</strong> من انتهاء صلاحيتها.</span><span class="en-txt">Location records: deleted within <strong>90 days</strong> of operational expiry.</span></li>
+      <li><span class="ar">السجلات الأمنية: تُحتفَظ حتى <strong>سنة</strong> للامتثال القانوني.</span><span class="en-txt">Security logs: retained up to <strong>one year</strong> for legal compliance.</span></li>
+    </ul>
+    <div class="alert a-gold">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+      <p><span class="ar">لطلب حذف بياناتك: <strong>privacy@skooly.app</strong> — مع اسمك الكامل والمدرسة المرتبطة بحسابك.</span><span class="en-txt">To request deletion: <strong>privacy@skooly.app</strong> — include your full name and the school linked to your account.</span></p>
+    </div>
+  </section>
+
+
+  <!-- ═══ § 13 ═══ -->
+  <section class="sec" id="s13">
+    <div class="sec-head">
+      <div class="sec-num">١٣<span class="en-txt" style="display:none">13</span></div>
+      <h2 class="ar">تحديثات السياسة</h2>
+      <h2 class="en-txt">Policy Updates</h2>
+    </div>
+    <ul class="plist">
+      <li><span class="ar">نُخطِرك عبر إشعار داخل التطبيق أو بريد إلكتروني قبل سريان أي تعديل بـ <strong>14 يومًا</strong>.</span><span class="en-txt">We notify you via in-app notification or email at least <strong>14 days</strong> before any change takes effect.</span></li>
+      <li><span class="ar">تاريخ آخر تحديث دائمًا موضَّح في أعلى الصفحة.</span><span class="en-txt">The last update date is always shown at the top of the page.</span></li>
+      <li><span class="ar">استمرارك في الاستخدام بعد التعديلات يُعدُّ قبولًا لها.</span><span class="en-txt">Continued use after amendments constitutes acceptance.</span></li>
+    </ul>
+  </section>
+
+
+  <!-- ═══ § 14 ═══ -->
+  <section class="sec" id="s14">
+    <div class="sec-head">
+      <div class="sec-num">١٤<span class="en-txt" style="display:none">14</span></div>
+      <h2 class="ar">تواصل معنا</h2>
+      <h2 class="en-txt">Contact Us</h2>
+    </div>
+    <p class="ar">لأي استفسارات حول هذه السياسة أو حقوقك، نحن هنا للمساعدة:</p>
+    <p class="en-txt">For any questions about this policy or your rights, we are here to help:</p>
+    <div class="contact-card">
+      <h3 class="ar">فريق سكولي</h3><h3 class="en-txt">Skooly Team</h3>
+      <p class="ar">يُسعدنا الرد في أقرب وقت</p><p class="en-txt">We'll respond as soon as possible</p>
+      <div class="chips">
+        <div class="chip">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          privacy@skooly.app
+        </div>
+        <div class="chip">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          support@skooly.app
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end page -->
+
+<!-- ═══ Footer ═══ -->
+<footer>
+  <div class="foot-brand">
+    <img src="images/icon.png" alt="Skooly">
+    <span>SK<em>OO</em>LY</span>
+  </div>
+  <p class="ar">© ٢٠٢٦ سكولي — جميع الحقوق محفوظة</p>
+  <p class="en-txt">© 2026 Skooly — All rights reserved</p>
+</footer>
+
+<script>
+  /* Language toggle */
+  function setLang(lang) {
+    const isEn = (lang === 'en');
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', isEn ? 'ltr' : 'rtl');
+    document.body.className = isEn ? 'en' : '';
+    document.querySelectorAll('.lang-btn').forEach((b, i) => {
+      b.classList.toggle('on', isEn ? i === 1 : i === 0);
+    });
+    localStorage.setItem('skooly_lang', lang);
+  }
+
+  /* Restore saved language */
+  (function () {
+    if (localStorage.getItem('skooly_lang') === 'en') setLang('en');
+  })();
+
+  /* Smooth scroll with offset */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      const el = document.querySelector(this.getAttribute('href'));
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 110, behavior: 'smooth' });
+    });
+  });
+
+  /* Navbar shadow */
+  window.addEventListener('scroll', () => {
+    document.querySelector('.nav').style.boxShadow =
+      scrollY > 5 ? '0 4px 30px rgba(0,0,0,.4)' : '0 2px 20px rgba(0,0,0,.25)';
+  });
+</script>
+</body>
+</html>
